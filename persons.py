@@ -275,7 +275,6 @@ for country_group in df.columns:
 
     n_alive_country_group[country_group] = dict(sorted(n_alive_country_group[country_group].items()))
 
-pprint(n_alive_country_group)
 colors = ['k', 'tab:red', 'tab:green', 'tab:orange', 'tab:purple', 'tab:blue']
 for country_group, color in zip(df.columns, colors):
     plt.plot(range(YEAR_START, YEAR_START + RANGE), n_alive_country_group[country_group].values(), label=country_group, color=color)
